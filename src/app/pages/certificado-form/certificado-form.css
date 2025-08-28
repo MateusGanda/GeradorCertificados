@@ -73,6 +73,10 @@ label {
   box-shadow: none;
 }
 
+.custom-input-group {
+  margin-bottom: 20px !important;
+}
+
 .custom-input-group:has(input:focus) label { /* CSS selector para estilizar o label quando o input está focado */
   color: #3B5AC2;
 }

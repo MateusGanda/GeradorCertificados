@@ -4,7 +4,7 @@ import { ItemCertificado } from "../../_components/item-certificado/item-certifi
 
 @Component({
   selector: 'app-certificados',
-  imports: [SecondaryButton, ItemCertificado],
+  imports: [ItemCertificado],
   templateUrl: './certificados.html',
   styleUrl: './certificados.css'
 })

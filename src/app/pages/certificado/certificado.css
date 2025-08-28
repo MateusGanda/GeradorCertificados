@@ -6,6 +6,7 @@
 
 .btn-voltar {
   gap: 6px;
+  cursor: pointer; /* Adiciona o cursor de ponteiro ao passar o mouse */
 }
 
 .btn-voltar p {

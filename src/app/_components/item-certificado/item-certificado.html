@@ -4,6 +4,6 @@
       <div class="fw-bold nome-aluno">Nome do aluno</div>
       <small class="small-date">Gerado em 17/08/2025</small>
     </div>
-    <app-secondary-button></app-secondary-button> <!--Posso chamar um componente dentro de outro componente-->
-  </div>
+    <app-secondary-button [routerLink]="['/certificados', id]"></app-secondary-button> <!--Posso chamar um componente dentro de outro componente-->
+  </div>   <!--[routerLink]="['/certificados', id]" quando o [routerLink] está entre colchetes, passa a receber um código typescript. Recomendado para uso quando se tem variável-->
 </div>

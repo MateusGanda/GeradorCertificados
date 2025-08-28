@@ -1,6 +1,6 @@
 <app-navbar ></app-navbar>
 <app-base-ui>
-  <app-certificado-form></app-certificado-form>
+  <router-outlet/> <!--Vai ler o arquivo app.routes.ts, vai verificar qual a rota foi acessado e Vai carregar no router-outlet meu componente-->
 </app-base-ui>
 <!--<app-navbar *ngIf="exibeNavbar"></app-navbar> O [hidden]="exibeNavbar" só esconde mas o navbar é inicializado-->
 <!--Para utilizar o *ngIf precisa importar o commonModule-->
