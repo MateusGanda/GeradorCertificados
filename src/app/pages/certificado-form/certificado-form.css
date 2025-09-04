@@ -95,6 +95,6 @@ label {
   vertical-align: middle;
 }
 
-.custom-input-group:has(.error-message) > label { /* CSS selector para estilizar o label quando há uma mensagem de erro */
-  color: #D71D1D;
+.text-danger-label {
+   color: #D71D1D;
 }

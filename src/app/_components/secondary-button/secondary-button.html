@@ -1,4 +1,7 @@
-<button class="custom-button">
-  <i class="ph ph-plus"></i>
-  Botão secundário
+<button [ngStyle]="disabled ? {'opacity': '50%'} : {}" class="custom-button"> <!--[ngStyle] aplica estilos dinamicamente com base na condição do botão estar desabilitado ou não. Se estiver desabilitado, aplica uma opacidade de 50%.-->
+  @if (phClass) {
+  <i class="{{phClass}}"></i>
+  }
+
+  {{textobotao}}
 </button>
