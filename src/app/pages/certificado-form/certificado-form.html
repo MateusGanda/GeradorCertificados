@@ -23,8 +23,8 @@
         <input #atividadeRef="ngModel" name="atividade" maxlength="50" required [(ngModel)]="atividade" id="atividade"
           type="text" class="form-control custom-input" placeholder="Atividade exercida">
       </div>
-      <app-secondary-button (click)="adicionarAtividade()" [disabled]="atividade.length == 0" textobotao="Adicionar"
-        phClass="ph ph-plus"></app-secondary-button>
+      <app-secondary-button (click)="adicionarAtividade()" [disabled]="!atividade || atividade.length == 0" textobotao="Adicionar"
+        phClass="ph ph-plus"></app-secondary-button> <!--[disabled]="!atividade || atividade.length == 0" desabilita o botão se a variável 'atividade' estiver vazia ou nula.-->
     </div>
     <div class="atividade-group">
       <label class="form-label">Lista de atividades</label>
