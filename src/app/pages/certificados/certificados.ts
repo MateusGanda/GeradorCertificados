@@ -19,7 +19,6 @@ export class Certificados implements OnInit {
 
   ngOnInit(): void {
     this.certificados = this.certificadoService.certificados;
-    console.log(this.certificados);
   }
   //constructor() {}ele é chamado quando a classe é instanciada
 

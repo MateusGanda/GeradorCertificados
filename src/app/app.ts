@@ -23,6 +23,5 @@ export class App implements OnInit {
   ngOnInit(): void {
     const certificados = localStorage.getItem('certificados'); // Pega os certificados do localStorage do navegador
     this.certificadoService.certificados = certificados ? JSON.parse(certificados) : []; // Carrega os certificados do localStorage do navegador ou um array vazio se não houver certificados
-    console.log(this.certificadoService.certificados);
   }
 }

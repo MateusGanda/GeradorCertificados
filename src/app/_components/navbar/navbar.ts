@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 
 
@@ -9,12 +9,6 @@ import { RouterLink, RouterModule } from '@angular/router';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })
-export class Navbar implements OnInit {
-  ngOnInit(): void {
-    this.mensagem();
-  }
+export class Navbar {
 
-  mensagem(){
-    console.log('Meu componente Navbar foi inicializado (dentro de uma função)');
-  }
 }
