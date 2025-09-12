@@ -11,7 +11,7 @@ export class CertificadoService {
   constructor(){}
 
   adicionarCertificado(certificado: Certificado){
-    this.certificados.push({ ...certificado }); //Resolve o problema de instância do objeto no array de certificados
+    this.certificados.unshift({ ...certificado }); // Adiciona o certificado no início do array
     localStorage.setItem('certificados', JSON.stringify(this.certificados)); // Salva os certificados no localStorage do navegador
   }
 }

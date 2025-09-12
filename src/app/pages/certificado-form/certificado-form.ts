@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Certificado } from '../../interfaces/certificado';
 import { CertificadoService } from '../../_services/certificado';
 import { v4 as uuidv4 } from 'uuid';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-certificado-form',
@@ -15,7 +16,7 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class CertificadoForm {
 
-  constructor(private certificadoService: CertificadoService){}
+  constructor(private certificadoService: CertificadoService, private route: Router){}
   @ViewChild('form') form!: NgForm; // Pega o formulário do template html e atribui a variável form
 
  certificado: Certificado = {
@@ -55,8 +56,10 @@ export class CertificadoForm {
     this.certificado.id = uuidv4(); // Gera um id único para cada certificado
     this.certificadoService.adicionarCertificado(this.certificado);
 
-    this.certificado = this.estadoInicialCertificado(); // Reseta o formulário após o envio
-    this.form.resetForm(); // Reseta o formulário visualmente
+    this.route.navigate(['/certificados', this.certificado.id]); // Redireciona para a página de certificados após o envio do formulário com o id do certificado
+
+    // this.certificado = this.estadoInicialCertificado(); Reseta o formulário após o envio
+    // this.form.resetForm(); Reseta o formulário visualmente
   }
 
   dataAtual() {
